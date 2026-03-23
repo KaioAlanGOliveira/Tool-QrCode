@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.eti.ljr</groupId>
+	<artifactId>qrcode</artifactId>
+	<version>1</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- maven-compiler-plugin -->
+		<maven.compiler.release>17</maven.compiler.release>
+		<maven.compiler.target>17</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>3.5.3</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Compila tudo em java 17 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.10.1</version>
+				<configuration>
+					<source>17</source>
+					<target>17</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
